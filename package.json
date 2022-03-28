@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Bot for creating and updating a todo list.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DehSheepie/ToDoList.git"
+  },
+  "author": "Sheepie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DehSheepie/ToDoList/issues"
+  },
+  "homepage": "https://github.com/DehSheepie/ToDoList#readme"
+}
