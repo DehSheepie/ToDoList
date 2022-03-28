@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DehSheepie/ToDoList/issues"
   },
-  "homepage": "https://github.com/DehSheepie/ToDoList#readme"
+  "homepage": "https://github.com/DehSheepie/ToDoList#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
 }
