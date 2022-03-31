@@ -4,7 +4,7 @@ const fs = require('fs');
 // Allows access to Discord.js stuff through Discord const
 const Discord = require('discord.js');
 const {token} = require('./private.json');
-const {prefix} = require('./config.json');
+const {prefix, channel} = require('./config.json');
 
 // Create new client instance
 
@@ -25,14 +25,14 @@ for (const file of commandFilenames) {
 // Runs once on startup
 client.once('ready', () => {
   console.log('To Do List is online!');
-  console.log(prefix);
 });
 
 // When client recieves a message
 client.on("messageCreate", message => {
   // If the message doesn't start with the prefix, ignore it.
     if (!message.content.startsWith(prefix) || message.author.bot) return
-
+    if (message.channel.name != channel) return;
+    console.log(message.channel.name);
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
