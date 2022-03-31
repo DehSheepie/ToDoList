@@ -12,6 +12,5 @@ module.exports = {
 
     // sends the embed
     message.channel.send({embeds: [embed]});
-    console.log("I should be sending a help message");
   }
 }
