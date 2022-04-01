@@ -33,7 +33,7 @@ client.on("messageCreate", message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return
     if (message.channel.name != channel) return;
     console.log(message.channel.name);
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(prefix.length).split(/ +/); // Regex content into args using spaces
     const command = args.shift().toLowerCase();
 
     // If command doesn't exist show error.
