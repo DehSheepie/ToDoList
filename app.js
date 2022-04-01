@@ -19,7 +19,23 @@ const commandFilenames = fs.readdirSync('./commands').filter(file => file.endsWi
 // Loops through all the command files and adds them to the client
 for (const file of commandFilenames) {
   const command = require(`./commands/${file}`);
-  client.commands.set(command.name, command);
+  if (Array.isArray(command.name))
+  {
+      for (const name of command.name)
+      {
+        // Checks if a command has varient names and adds them if it does
+
+        /* This kinda duplicates the command instead of linking multiple
+        names to the same command but it's probably fine heh..
+
+        I'll come back to this if it becomes a problem.*/
+        client.commands.set(name, command);
+      }
+  }
+  else
+  {
+      client.commands.set(command.name, command);
+  }
 }
 
 // Runs once on startup
