@@ -8,11 +8,23 @@ module.exports = {
     let user = message.author.id;
     if (functions.checkFileExists(`${user}.json`))
     {
+      // Data should contain:
+      // user: int
+      // tdl-d: [str]
+      // tdl-l: [str]
+      let data = functions.getData(`${user}.json`);
       message.reply("I have your file!");
+      message.reply(`Your daily todo list: ${data[`tdl-d`]}`);
     }
     else
     {
-        functions.createFile(user, {})
+        let data =
+        {
+            'user': user,
+            'tdl-d': [],
+            'tdl-l': []
+        }
+        functions.createFile(user, data)
         message.reply("Your file has been created!");
     }
   }
