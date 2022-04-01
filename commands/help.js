@@ -1,9 +1,9 @@
+const Discord = require('discord.js');
 module.exports = {
   name: 'help',
   description: 'Useful info on how to use this bot.',
-  execute(message, args){
-    const Discord = require('discord.js');
-
+  execute(message, args)
+  {
     // prepares the embed
     const embed = new Discord.MessageEmbed()
     .setTitle("Help!")
