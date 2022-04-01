@@ -17,7 +17,6 @@ module.exports = {
     let files = fs.readdirSync('./commands/data').filter(file => file.endsWith('json'));
     for (let file of files)
     {
-      console.log(`filename: ${filename}   comparison file: ${file}`);
         if (file == filename)
         {
           return true;
