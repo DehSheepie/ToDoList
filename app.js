@@ -48,7 +48,6 @@ client.on("messageCreate", message => {
   // If the message doesn't start with the prefix, ignore it.
     if (!message.content.startsWith(prefix) || message.author.bot) return
     if (message.channel.name != channel) return;
-    console.log(message.channel.name);
     // split content using regex to find space seperator
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
