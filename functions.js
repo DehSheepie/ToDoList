@@ -12,7 +12,7 @@ module.exports = {
     fs.writeFileSync(`commands/data/${filename}.json`, JSON.stringify(data));
   },
 
-  checkFileExists(filename){
+  checkFileExists: function(filename){
     // readdirSync returns file names
     let files = fs.readdirSync('./commands/data').filter(file => file.endsWith('json'));
     for (let file of files)
