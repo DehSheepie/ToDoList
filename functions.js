@@ -8,7 +8,7 @@ module.exports = {
     return objectData;
   },
 
-  createFile : function(filename, data){
+  writeData : function(filename, data){
     fs.writeFileSync(`commands/data/${filename}.json`, JSON.stringify(data));
   },
 

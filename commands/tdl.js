@@ -24,7 +24,7 @@ module.exports = {
             'tdl-d': [],
             'tdl-l': []
         }
-        functions.createFile(user, data)
+        functions.writeData(user, data)
         message.reply("Your file has been created!");
     }
   }

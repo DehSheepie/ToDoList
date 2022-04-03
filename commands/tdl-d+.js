@@ -18,7 +18,7 @@ module.exports = {
       {
           data['tdl-d'].push(args[i]);
       }
-      functions.createFile(user, data);
+      functions.writeData(user, data);
       message.reply("The todos have been added to your list.");
     }
     else
@@ -29,7 +29,7 @@ module.exports = {
             'tdl-d': [],
             'tdl-l': []
         }
-        functions.createFile(user, data)
+        functions.writeData(user, data)
         message.reply("Your file has been created!");
     }
   }
