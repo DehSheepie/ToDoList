@@ -25,9 +25,8 @@ module.exports = {
           {
             item += args[i] + " ";
           }
-
       }
-      data['tdld'].push(args[i]);
+      data['tdld'].push(item);
       functions.writeData(user, data);
       message.reply("The todos have been added to your list.");
     }
