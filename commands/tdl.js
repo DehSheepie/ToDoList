@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const functions = require('../functions.js');
 module.exports = {
-  name: ['tdl', 'tdl-d'],
+  name: ['tdl', 'tdld'],
   description: 'Show and edit your daily todo list',
   execute(message, args)
   {
@@ -10,19 +10,19 @@ module.exports = {
     {
       // Data should contain:
       // user: int
-      // tdl-d: [str]
-      // tdl-l: [str]
+      // tdld: [str]
+      // tdll: [str]
       let data = functions.getData(`${user}.json`);
       message.reply("I have your file!");
-      message.reply(`Your daily todo list: ${data[`tdl-d`]}`);
+      message.reply(`Your daily todo list: ${data[`tdld`]}`);
     }
     else
     {
         let data =
         {
             'user': user,
-            'tdl-d': [],
-            'tdl-l': []
+            'tdld': [],
+            'tdll': []
         }
         functions.writeData(user, data)
         message.reply("Your file has been created!");
