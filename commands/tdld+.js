@@ -14,10 +14,20 @@ module.exports = {
       // tdld: [str]
       // tdll: [str]
       let data = functions.getData(`${user}.json`);
+      let item = "";
       for (var i  = 0; i < args.length; i++)
       {
-          data['tdld'].push(args[i]);
+          if (i == args.length - 1)
+          {
+            item += args[i];
+          }
+          else
+          {
+            item += args[i] + " ";
+          }
+
       }
+      data['tdld'].push(args[i]);
       functions.writeData(user, data);
       message.reply("The todos have been added to your list.");
     }
